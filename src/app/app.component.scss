@@ -1,0 +1,33 @@
+.home {
+  width: 100%;
+  background-image: linear-gradient(to right top, #030043, #051155, #0d1e68, #132b7c, #173990, #1e41a0, #254ab0, #2b53c0, #3957cf, #495ade, #5a5ded, #6b5ffb);
+    
+  &__content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      &--box {
+          width: 100%;
+          max-width: 1200px;
+          height: 76vh;
+          background-color: #faf8fd;
+          background-image: url('https://www.catho.com.br/carreira-sucesso/wp-content/uploads/sites/3/2020/04/home-office-o-que-%C3%A9-1.jpg');
+          background-position-x: right;
+          border-radius: 10px;
+          overflow: hidden;
+          box-shadow: 0 0 20px 2px rgb(0 0 0 / 35%);
+          &-form{
+              width: 100%;
+              max-width: 50%;
+              height: 100%;
+              background-color: #faf8fd;
+              margin-left: auto;
+              padding: 20px;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+          }
+      }
+  }
+}
