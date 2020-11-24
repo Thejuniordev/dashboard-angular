@@ -1,0 +1,64 @@
+<section class="register">
+  <div class="container">
+    <div class="register__content">
+      <figure>
+        <img src="https://cdn.iconscout.com/icon/free/png-512/google-shopping-2038771-1721668.png" alt="Logo">
+      </figure>
+      <strong>Crie sua conta agora mesmo</strong>
+      <form action="" method="post" class="form">
+
+        <div class="form__content flex flex__between">
+
+          <div class="form__content--input">
+            <div class="form__control">
+              <i class="far fa-user"></i>
+              <input type="text" placeholder="Nome">
+            </div>
+            <div class="form__control">
+              <i class="far fa-user"></i>
+              <input type="text" placeholder="Sobrenome">
+            </div>
+            <div class="form__control">
+              <i class="far fa-envelope"></i>
+              <input type="mail" placeholder="E-mail">
+            </div>
+            <div class="form__control">
+              <i class="fas fa-phone"></i>
+              <input type="mail" placeholder="Telefone">
+            </div>
+          </div>
+
+          <div class="form__content--input">
+            <div class="form__control">
+              <i class="far fa-id-card"></i>
+              <input type="text" placeholder="CPF">
+            </div>
+            <div class="form__control">
+              <i class="fas fa-city"></i>
+              <select name="City" id="">
+                <option value="">Selecione um estado</option>
+                <option value="SP">São Paulo</option>
+                <option value="RJ">Rio de Janeiro</option>
+                <option value="SP">Paraná</option>
+                <option value="SP">Santa Catarina</option>
+                <option value="SP">Rio Grande do Sul</option>
+              </select>
+            </div>
+            <div class="form__control">
+              <i class="fas fa-key"></i>
+              <input type="password" placeholder="Senha">
+            </div>
+            <div class="form__control">
+              <i class="fas fa-key"></i>
+              <input type="password" placeholder="Confirmar Senha">
+            </div>
+          </div>
+
+        </div>
+        <button type="submit" class="btn">Registrar</button>
+
+      </form>
+      <span class="login">Já possui conta? <a [routerLink]="['/login']">Faça login</a></span>
+    </div>
+  </div>
+</section>
