@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "my-ecommerce"
+    }
+  },
+  "defaultProject": "my-ecommerce",
+  "cli": {
+    "analytics": "7a76abcf-5c72-426e-a7b6-265e21633e81"
+  }
 }

@@ -1,13 +1,12 @@
-<section class="home">
+<section class="login">
   <div class="container">
-    <div class="home__content">
-      <div class="home__content--box">
-        <div class="home__content--box-form">
+    <div class="login__content">
+      <div class="login__content--box">
+        <div class="login__content--box-form">
           <strong class="title">Bem vindo</strong>
-          <span class="text">Faça login ou cadastre-se</span>
-
-          <div class="login">
-            <form action="">
+          <span class="text">Faça login</span>
+          <div class="login__form">
+            <form>
               <div class="form__control">
                 <label for="user">Usuário</label>
                 <input id="user" type="text">
@@ -16,8 +15,13 @@
                 <label for="pass">Senha</label>
                 <input id="pass" type="password">
               </div>
-              <button type="submit">Login</button>
+              <button class="btn" type="submit">Login</button>
             </form>
+
+            <div class="link__bottom">
+              <a [routerLink]="['/register']" routerLinkActive="router-link-active" >Cadastre-se</a>
+            </div>
+
           </div>
         </div>
       </div>
