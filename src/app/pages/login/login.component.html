@@ -1,30 +1,22 @@
 <section class="login">
   <div class="container">
     <div class="login__content">
-      <div class="login__content--box">
-        <div class="login__content--box-form">
-          <strong class="title">Bem vindo</strong>
-          <span class="text">Faça login</span>
-          <div class="login__form">
-            <form>
-              <div class="form__control">
-                <label for="user">Usuário</label>
-                <input id="user" type="text">
-              </div>
-              <div class="form__control">
-                <label for="pass">Senha</label>
-                <input id="pass" type="password">
-              </div>
-              <button class="btn" type="submit">Login</button>
-            </form>
-
-            <div class="link__bottom">
-              <a [routerLink]="['/register']" routerLinkActive="router-link-active" >Cadastre-se</a>
-            </div>
-
-          </div>
+      <figure>
+        <img src="https://cdn.iconscout.com/icon/free/png-512/google-shopping-2038771-1721668.png" alt="Logo">
+      </figure>
+      <form action="" method="post">
+        <strong>Faça login com a sua conta</strong>
+        <div class="form__control">
+          <i class="far fa-user"></i>
+          <input type="mail" placeholder="Usuário">
         </div>
-      </div>
+        <div class="form__control">
+          <i class="fas fa-key"></i>
+          <input type="password" placeholder="Senha">
+        </div>
+        <button type="submit" class="btn">Login</button>
+      </form>
+      <span class="register">Ainda não possui conta? <a [routerLink]="['/register']">Registre-se</a></span>
     </div>
   </div>
 </section>

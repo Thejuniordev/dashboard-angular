@@ -1,0 +1,34 @@
+header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 5px 0;
+  .content{
+    .logo{
+      img{
+        width: auto;
+        height: 70px;
+      }
+    }
+    .menu{
+      width: 100%;
+      max-width: 500px;
+      li{
+        a{
+          color: #3788f1;
+        }
+      }
+      .login{
+        width: 100%;
+        max-width: 100px;
+        .btn{
+          width: 100%;
+          max-width: 100px;
+          padding: 10px 0;
+          color: #ffffff;
+        }
+      }
+    }
+  }
+}

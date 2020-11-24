@@ -1,16 +1,40 @@
+<app-header></app-header>
 <section class="home">
   <div class="container">
-    <div class="home__content">
-      <div class="home__content--box">
-        <div class="home__content--box-form">
-          <strong class="title">Bem vindo</strong>
-          <span class="text">Faça login ou cadastre-se</span>
-          
-          <div class="login flex">
-            <a [routerLink]="['/login']" routerLinkActive="router-link-active" class="btn" >Login</a>
-            <a [routerLink]="['/register']" routerLinkActive="router-link-active" class="btn">Cadasrtre-se</a>
-          </div>
-        </div>
+    <div class="home__content flex flex__between flex__aligncenter">
+      <div class="home__content--text">
+        <h2 class="title">Online <strong>Shopping</strong></h2>
+        <strong>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</strong>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, est, nam impedit tempore totam necessitatibus omnis aliquam ratione minus assumenda magnam deleniti cupiditate, quas amet a corporis enim reprehenderit officiis!</p>
+        <a class="btn" [routerLink]="['/register']">Registre-se</a>
+        <ul class="social flex flex__between">
+          <li class="icon">
+            <a href="">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+          </li>
+          <li class="icon">
+            <a href="">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </li>
+          <li class="icon">
+            <a href="">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+          </li>
+          <li class="icon">
+            <a href="">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="home__content--image">
+        <figure>
+          <img src="https://png.pngtree.com/png-vector/20200422/ourmid/pngtree-online-shopping-concept-with-man-and-woman-characters-png-image_2187791.jpg" alt="">
+        </figure>
       </div>
     </div>
   </div>
