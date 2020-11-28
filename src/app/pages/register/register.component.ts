@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AccountService } from 'src/app/services/account.service';
 
 @Component({
   selector: 'app-register',
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class RegisterComponent implements OnInit {
 
   account = {
-    firstName: '',
+    name: '',
     lastName: '',
     email: '',
     phone: '',
@@ -18,13 +19,18 @@ export class RegisterComponent implements OnInit {
     confirmPassword: '',
   }
 
-  constructor() { }
+  constructor(private accountService: AccountService) { }
 
   ngOnInit() {
   }
 
-  onRegister() {
+  async onRegister() {
+    try {
+      const result = await this.accountService.createAccount(this.account);
 
+    } catch (error) {
+      console.error(error);
+    }
   }
 
 }

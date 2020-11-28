@@ -19,10 +19,14 @@ export class AccountService {
     return false;
   }
 
-  createAccount(account: any) {
-    return new Promise((resolve) => {
-      resolve(true);
-    });
+  async createAccount(account: any) {
+    const result = await this.http.post<any>(`${environment.api}/users`, account).toPromise();
+    return result;
+  }
+
+  getAuthorizationToken() {
+    const token = window.localStorage.getItem('token');
+    return token;
   }
 
 }
