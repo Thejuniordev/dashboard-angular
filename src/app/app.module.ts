@@ -13,6 +13,7 @@ import { RegisterComponent } from './pages/register/register.component';
 import { HeaderComponent } from './components/template/header/header.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { httpInterceptorProviders } from './http-interceptors';
+import { HeaderDashboardComponent } from './components/template/header-dashboard/header-dashboard.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { httpInterceptorProviders } from './http-interceptors';
     HomeComponent,
     RegisterComponent,
     HeaderComponent,
-    DashboardComponent
+    DashboardComponent,
+    HeaderDashboardComponent
   ],
   imports: [
     BrowserModule,
