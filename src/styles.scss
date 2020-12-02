@@ -116,3 +116,21 @@ a{
         }
     }
 }
+
+.icon {
+  &__circle {
+    width: 100%;
+    max-width: 40px;
+    height: 40px;
+    background: #ebebeb;
+    position: relative;
+    border-radius: 50%;
+  }
+
+  i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

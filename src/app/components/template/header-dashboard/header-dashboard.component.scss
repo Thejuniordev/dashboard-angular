@@ -1,0 +1,50 @@
+.header {
+  position: relative;
+  box-shadow: 1px 0 10px 1px rgba(0,0,0,.2);
+
+  &__search {
+    width: 100%;
+    max-width: 600px;
+  }
+
+  .icon {
+    margin: 0 10px;
+  }
+  .user {
+    width: 100%;
+    max-width: 400px;
+    &__perfil {
+      position: relative;
+      margin-left: 40px;
+      background: #ebebeb;
+      padding: 5px 10px;
+      width: 100%;
+      max-width: 240px;
+      border-radius: 5px;
+      i {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      figure {
+        width: 40px;
+        height: 40px;
+        position: relative;
+        border-radius: 0;
+        overflow: hidden;
+        border-radius: 50%;
+        margin-right: 20px;
+        img {
+          width: 100%;
+        }
+      }
+
+      .perfil__text {
+        .text {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
