@@ -3,22 +3,35 @@
 
     &__content {
         display: flex;
-        align-items: center;
-        flex-direction: column;
-        justify-content: center;
         height: 100vh;
+      &--left {
+        background-image: linear-gradient(to right top, #0b6bfb, #1259e5, #1447cf, #1436b9, #1124a4);
+        height: 100vh;
+        width: 100%;
+      }
+      &--right {
+        background-color: #fff;
+        width: 80%;
+        padding: 60px;
+      }
+      .logo {
+        width: 100%;
+        max-width: 130px;
+        margin-bottom: 80px;
+        img {
+          width: 100%;
+        }
+      }
 
-        figure{
-          img{
-            width: 100%;
-            max-width: 100px;
-            margin-bottom: 30px;
-          }
+      form {
+        margin-top: 90px;
+        margin-bottom: 50px;
+        input{
+          max-width: 450px;
         }
-        form {
-          .btn{
-            margin: 30px 0;
-          }
+        .btn{
+          max-width: 450px;
         }
+      }
     }
   }

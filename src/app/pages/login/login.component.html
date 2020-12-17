@@ -1,22 +1,26 @@
 <section class="login">
-  <div class="container">
     <div class="login__content">
-      <figure>
-        <img src="https://cdn.iconscout.com/icon/free/png-512/google-shopping-2038771-1721668.png" alt="Logo">
-      </figure>
-      <form (ngSubmit)="onSubmit()" #form=ngForm>
-        <strong>Faça login com a sua conta</strong>
-        <div class="form__control">
-          <i class="far fa-user"></i>
-          <input type="mail" [(ngModel)]="login.email" name="login" placeholder="E-mail" required />
-        </div>
-        <div class="form__control">
-          <i class="fas fa-key"></i>
-          <input type="password" [(ngModel)]="login.password" name="password" placeholder="Senha" required />
-        </div>
-        <button type="submit" class="btn" [disabled]="form.form.invalid">Login</button>
-      </form>
-      <span class="register">Ainda não possui conta? <a [routerLink]="['/register']">Registre-se</a></span>
+      <div class="login__content--left"></div>
+      <div class="login__content--right">
+        <figure class="logo">
+          <img src="../../../assets/images/logo.png" alt="Logo">
+        </figure>
+
+        <strong class="title">Log In</strong>
+        <span class="text">Faça login com a seu email e senha para acessar o dashboard</span>
+
+        <form (ngSubmit)="onSubmit()" #form=ngForm>
+          <div class="form__control">
+            <label for="email">Email</label>
+            <input type="mail" id="email" [(ngModel)]="login.email" name="login" required />
+          </div>
+          <div class="form__control">
+            <label for="pass">Senha</label>
+            <input type="password" id="pass" [(ngModel)]="login.password" name="password" required />
+          </div>
+          <button type="submit" class="btn" [disabled]="form.form.invalid">Login</button>
+        </form>
+        <span class="text">Ainda não tem conta? <a [routerLink]="['/register']">Registre-se</a> </span>
+      </div>
     </div>
-  </div>
 </section>
