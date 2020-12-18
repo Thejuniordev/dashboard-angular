@@ -1,0 +1,19 @@
+.main{
+  background: #f1f5fc;
+  padding: 10px 10px 0 10px;
+  .content{
+    display: flex;
+    justify-content: space-between;
+    .page{
+      background-color: #ffffff;
+      width: 85%;
+      height: 95vh;
+      border-radius: 30px;
+
+    }
+  }
+  app-navigation{
+    width: 100%;
+    max-width: 15%;
+  }
+}
