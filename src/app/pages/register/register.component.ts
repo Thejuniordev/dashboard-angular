@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { timeInterval } from 'rxjs/operators';
 import { AccountService } from 'src/app/services/account.service';
 
 @Component({
@@ -10,16 +12,12 @@ export class RegisterComponent implements OnInit {
 
   account = {
     name: '',
-    lastName: '',
     email: '',
-    phone: '',
-    documentNumber: '',
-    state: '',
     password: '',
     confirmPassword: '',
   }
 
-  constructor(private accountService: AccountService) { }
+  constructor(private accountService: AccountService, private router: Router,) { }
 
   ngOnInit() {
   }
@@ -27,6 +25,12 @@ export class RegisterComponent implements OnInit {
   async onRegister() {
     try {
       const result = await this.accountService.createAccount(this.account);
+      var success = document.getElementsByClassName('success__top')[0];
+      success.classList.add('this__success');
+
+      setTimeout( () => {
+        this.router.navigate(['login']);
+      }, 2000);
 
     } catch (error) {
       console.error(error);
