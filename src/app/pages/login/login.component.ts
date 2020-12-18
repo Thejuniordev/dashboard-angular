@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Validators, FormBuilder, FormGroup, FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AccountService } from '../../services/account.service';
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -12,12 +14,20 @@ export class LoginComponent implements OnInit {
     password: ''
   };
 
+  formulario: FormGroup;
+
   constructor(
     private accountService: AccountService,
-    private router: Router
+    private router: Router,
+    private formBuilder: FormBuilder,
   ) {}
 
-    ngOnInit() {}
+    ngOnInit() {
+      this.formulario = this.formBuilder.group({
+        email: [null, [Validators.required, Validators.email]],
+        password: [null, Validators.required]
+      })
+    }
 
     async onSubmit() {
       try {
@@ -26,7 +36,21 @@ export class LoginComponent implements OnInit {
 
         this.router.navigate(['dashboard']);
       } catch (error) {
-        console.error(error)
+        console.error(error);
+        var erro = document.getElementsByClassName('error__top')[0];
+        erro.classList.add('this__error');
+      }
+    }
+
+
+    verificaValidTouched(campo) {
+      return !this.formulario.get(campo).valid && this.formulario.get(campo).touched
+    }
+
+    aplicationCssError(campo) {
+      return {
+        'has-error': this.verificaValidTouched(campo),
+        'has-feedback': this.verificaValidTouched(campo),
       }
     }
 
