@@ -1,4 +1,80 @@
 .header {
   position: relative;
-
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .title{
+    &__page{
+      .title{
+        font-size: 25px;
+        margin-bottom: 5px;
+      }
+      .text {
+        font-size: 14px;
+      }
+    }
+  }
+  .notify{
+    &__page{
+      display: flex;
+      align-items: center;
+      .perfil{
+        position: relative;
+        .status{
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          background-color: #eeeeee;
+          &.online{
+            background-color: #13ce0c;
+          }
+        }
+        figure{
+          overflow: hidden;
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          img{
+            width: 100%;
+          }
+        }
+      }
+      .notify{
+        cursor: pointer;
+        width: 40px;
+        height: 40px;
+        border: 1px solid #cad4e2;
+        border-radius: 5px;
+        position: relative;
+        margin: 0 30px 0 0;
+        &__number{
+          position: absolute;
+          width: 12px;
+          height: 12px;
+          background-color: #ce0c0c;
+          font-size: 10px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: #ffffff;
+          border-radius: 50%;
+          right: -5px;
+          top: -4px;
+        }
+        i{
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          color: #58677d;
+          font-size: 20px;
+        }
+      }
+    }
+  }
 }

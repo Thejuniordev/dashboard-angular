@@ -5,11 +5,13 @@
     display: flex;
     justify-content: space-between;
     .page{
-      background-color: #ffffff;
+      background-color: #fcfdfe;
+      box-shadow: 1px 1px 20px 20px rgb(11 107 251 / 0.04);
+      padding: 30px 30px 5px;
       width: 85%;
       height: 95vh;
       border-radius: 30px;
-
+      overflow: hidden;
     }
   }
   app-navigation{
