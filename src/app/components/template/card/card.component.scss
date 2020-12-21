@@ -46,10 +46,12 @@
           }
           .text{
             font-size: 12px;
+            margin-bottom: 0;
           }
         }
         &--value{
           margin-left: 20px;
+          width: 100%;
           .text{
             margin-bottom: 0;
             color: #ffffff;
