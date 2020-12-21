@@ -1,0 +1,131 @@
+.card{
+  width: 100%;
+  max-width: 23%;
+  height: 200px;
+  border: 1px solid #cad4e2;
+  border-radius: 20px;
+  padding: 30px;
+  overflow: hidden;
+  position: relative;
+  &.balance{
+    background: #0b6bfb;
+    &::before{
+      content: '';
+      position: absolute;
+      width: 330px;
+      height: 200px;
+      background: #689ff1;
+      top: -20px;
+      left: -70px;
+      border-radius: 50%;
+      z-index: 0;
+    }
+    .card__header{
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+    }
+    .card{
+      &__footer{
+        display: flex;
+        align-items: flex-end;
+        margin-top: 10px;
+        position: relative;
+        .credit__card{
+          width: 100%;
+          max-width: 159px;
+          height: 90px;
+          background: #ffffff;
+          border-radius: 10px;
+          padding: 10px;
+          strong{
+            color: #083477;
+            font-size: 16px;
+            margin-bottom: 5px;
+            display: block;
+          }
+          .text{
+            font-size: 12px;
+          }
+        }
+        &--value{
+          margin-left: 20px;
+          .text{
+            margin-bottom: 0;
+            color: #ffffff;
+          }
+        }
+      }
+    }
+    strong{
+      color: #ffffff;
+    }
+    .more{
+      cursor: pointer;
+      border: none;
+      background: #ffffff;
+      padding: 10px;
+      border-radius: 5px;
+      i{
+        font-size: 20px;
+        color: #367de7;
+      }
+    }
+  }
+  &__row{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__header{
+    display: flex;
+    align-items: center;
+  }
+  &__percent{
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+    &--icon{
+      position: relative;
+      width: 17px;
+      height: 17px;
+      background-color: #689ff1;
+      border-radius: 50%;
+      i{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        font-size: 10px;
+        color: #ffffff;
+      }
+    }
+    &--number{
+      font-size: 18px;
+      margin-left: 10px;
+      color: #0b6bfb;
+    }
+  }
+  &__value{
+    font-size: 30px;
+    margin-top: 30px;
+    display: block;
+    color: #083477;
+  }
+  &__icon{
+    background-color: #ffffff;
+    width: 60px;
+    height: 60px;
+    box-shadow: 1px 1px 20px 8px rgb(11 107 251 / 0.1);
+    border-radius: 20px;
+    position: relative;
+    i{
+      font-size: 25px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #0b6bfb;
+    }
+  }
+}

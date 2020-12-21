@@ -15,6 +15,7 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { httpInterceptorProviders } from './http-interceptors';
 import { HeaderDashboardComponent } from './components/template/header-dashboard/header-dashboard.component';
 import { NavigationComponent } from './components/template/navigation/navigation.component';
+import { CardComponent } from './components/template/card/card.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { NavigationComponent } from './components/template/navigation/navigation
     HeaderComponent,
     DashboardComponent,
     HeaderDashboardComponent,
-    NavigationComponent
+    NavigationComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,
